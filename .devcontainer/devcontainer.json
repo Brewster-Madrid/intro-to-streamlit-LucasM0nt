@@ -1,0 +1,13 @@
+{
+  "name": "Streamlit (Python)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postAttachCommand": "streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false --server.address 0.0.0.0 --server.port 8501"
+}
